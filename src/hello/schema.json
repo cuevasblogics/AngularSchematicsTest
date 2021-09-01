@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "SchematicsHello",
+    "title": "My Component Schema",
+    "type": "object",
+    "description": "Say hello to someone",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Your Name",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        },
+        "x-prompt": "What is your name?"
+      },
+      "transform": {
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "required": ["name"]
+}
